@@ -5,7 +5,7 @@ import { Button } from './Button';
 import './Button.css';
 
 const arrowButtonProps = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
   className: PropTypes.string
 };

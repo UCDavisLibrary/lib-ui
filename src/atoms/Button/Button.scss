@@ -1,15 +1,15 @@
-@import '../../theme/colors.scss';
+@import '../../theme/variables/colors.scss';
 
 .libui-Button {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: .8rem 1.2rem;
+  padding: .7rem 1.2rem;
   border: none;
   background-color: $primary;
 
-  font-size: .9rem;
+  font-size: .95rem;
   letter-spacing: 1px;
   color: #fff;
 

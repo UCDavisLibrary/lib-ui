@@ -1,5 +1,6 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	entry: './src/index.js',
@@ -14,8 +15,15 @@ module.exports = {
 		rules: [
 			{
         test: /\.css$/,
-				exclude: /node_modules/,
+				exclude: /(node_modules|theme)/,
         loader: [ 'style-loader', 'css-loader' ]
+      },
+			{
+        test: /theme.css/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader"
+        })
       },
 			{
 				test: /\.js$/,
@@ -23,5 +31,8 @@ module.exports = {
 				loader: 'babel-loader'
 			}
 		]
-	}
+	},
+	plugins: [
+    new ExtractTextPlugin("theme.css"),
+  ]
 };

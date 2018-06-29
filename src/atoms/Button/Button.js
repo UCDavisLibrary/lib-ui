@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const buttonProps = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
   className: PropTypes.string
 };
@@ -15,7 +15,7 @@ const buttonDefaultProps = {
 
 export const Button = ({ children, className, onClick }) => {
   return (
-    <button className={`libui-Button ${ className }`} onClick={ onClick }>
+    <button className={`libui-Button ${ true && className }`} onClick={ onClick }>
       { children }
     </button>
   )

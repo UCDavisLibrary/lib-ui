@@ -30,11 +30,25 @@ This installs the current build to your local global node_modules directory. You
 ```
 npm i --save absolute/file/system/path/to/your/global/node_modules/@ucd-lib/lib-ui
 ```
-Now you can import components into your React app. For example:
+Now you can import the theme and components into your React app. See **Usage** section below for details.
+
+## Usage
+1. Link the fonts
+```html
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:700" rel="stylesheet">
+```
+2. Include the theme styles
 ```js
+// In your React entry point (Example: index.js if you used create-react-app)
+import '@ucd-lib/lib-ui/dist/theme.css';
+```
+**Note:** Don't forget to remove or override the default styles if you used create-react-app to bootstrap your app.
+3. Using components
+```js
+// In a React component
 import { Atoms } from '@ucd-lib/lib-ui';
 
 export const MyReactApp = ({}) => (
-	<Atoms.Button>Submit</Atoms.Button>
+  <Atoms.Button>Submit</Atoms.Button>
 )
 ```
