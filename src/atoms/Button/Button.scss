@@ -25,6 +25,9 @@
     }
   }
 
+  /**
+   * 'type' prop
+   */
   &.primary {
     background-color: $primary;
 
@@ -34,7 +37,6 @@
       background-color: $ucd-blue700;
     }
   }
-
   &.secondary {
     background-color: $secondary;
 
@@ -44,7 +46,6 @@
       background-color: $ucd-gold700;
     }
   }
-
   &.arrow {
     .arrow {
       display: block;
@@ -55,7 +56,6 @@
       transition: all .2s;
     }
   }
-
   &.ghost {
     background-color: rgba(0, 0, 0, 0);
 
@@ -64,5 +64,13 @@
     &:hover {
       background-color: rgba(0, 0, 0, .1);
     }
+  }
+
+  /**
+   * 'size' prop
+   */
+  &.sm {
+    padding: .5rem 1rem;
+    font-size: .8rem;
   }
 }

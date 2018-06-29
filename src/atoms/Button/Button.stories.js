@@ -50,7 +50,8 @@ storiesOf('Atoms/Buttons', module)
         <thead style={{ backgroundColor: 'hsl(0, 0%, 90%)' }}>
           <tr>
             <th>Type</th>
-            <th>Example</th>
+            <th>Size: md (default)</th>
+            <th>Size: sm</th>
           </tr>
         </thead>
         <tbody>
@@ -58,6 +59,11 @@ storiesOf('Atoms/Buttons', module)
             <td>Primary <strong>(default)</strong></td>
             <td>
               <Button onClick={action('primary button click')}>
+                Confirm
+              </Button>
+            </td>
+            <td>
+              <Button size="sm" onClick={action('primary button click')}>
                 Confirm
               </Button>
             </td>
@@ -69,6 +75,11 @@ storiesOf('Atoms/Buttons', module)
                 Submit
               </Button>
             </td>
+            <td>
+              <Button size="sm" type="secondary" onClick={action('secondary button click')}>
+                Submit
+              </Button>
+            </td>
           </tr>
           <tr>
             <td>Ghost</td>
@@ -77,11 +88,21 @@ storiesOf('Atoms/Buttons', module)
                 Cancel
               </Button>
             </td>
+            <td>
+              <Button size="sm" type="ghost" onClick={action('ghost button click')}>
+                Cancel
+              </Button>
+            </td>
           </tr>
           <tr>
             <td>Arrow</td>
             <td>
               <Button type="arrow" onClick={action('arrow button click')}>
+                Get started
+              </Button>
+            </td>
+            <td>
+              <Button size="sm" type="arrow" onClick={action('arrow button click')}>
                 Get started
               </Button>
             </td>
