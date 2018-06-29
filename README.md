@@ -38,11 +38,12 @@ Now you can import the theme and components into your React app. See **Usage** s
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:700" rel="stylesheet">
 ```
 2. Include the theme styles
+
+**Note:** Don't forget to remove or override the default styles if you used create-react-app to bootstrap your app.
 ```js
 // In your React entry point (Example: index.js if you used create-react-app)
 import '@ucd-lib/lib-ui/dist/theme.css';
 ```
-**Note:** Don't forget to remove or override the default styles if you used create-react-app to bootstrap your app.
 3. Using components
 ```js
 // In a React component
