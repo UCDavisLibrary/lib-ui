@@ -6,9 +6,9 @@ import './Button.css';
 const buttonProps = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
-  className: PropTypes.string,
   type: PropTypes.oneOf(['primary', 'secondary', 'ghost', 'arrow']),
-  size: PropTypes.oneOf(['sm', 'md'])
+  size: PropTypes.oneOf(['sm', 'md']),
+  className: PropTypes.string
 };
 
 const buttonDefaultProps = {
@@ -17,9 +17,11 @@ const buttonDefaultProps = {
   size: 'md'
 }
 
-export const Button = ({ children, type, size, className, onClick }) => {
+export const Button = ({ children, onClick, type, size, className, ...props }) => {
   return (
-    <button className={`libui-Button ${ type } ${ size } ${ true && className }`} onClick={ onClick }>
+    <button className={`libui-Button ${ type } ${ size } ${ true && className }`}
+            onClick={ onClick }
+            { ...props }>
       <div>{ children }</div>
       { type === 'arrow' && <span className="arrow">&rarr;</span> }
     </button>
