@@ -6,17 +6,20 @@ import './Button.css';
 const buttonProps = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  type: PropTypes.oneOf(['primary', 'secondary', 'ghost', 'arrow'])
 };
 
 const buttonDefaultProps = {
-  onClick: () => {}
+  onClick: () => {},
+  type: 'primary'
 }
 
-export const Button = ({ children, className, onClick }) => {
+export const Button = ({ children, type, className, onClick }) => {
   return (
-    <button className={`libui-Button ${ true && className }`} onClick={ onClick }>
-      { children }
+    <button className={`libui-Button ${ type } ${ true && className }`} onClick={ onClick }>
+      <div>{ children }</div>
+      { type === 'arrow' && <span className="arrow">&rarr;</span> }
     </button>
   )
 }

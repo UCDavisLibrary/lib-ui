@@ -19,6 +19,7 @@ npm i -g @storybook/cli
 cd path/to/lib-ui
 npm start
 ```
+That's all! You can now start messing with the styles and components in /src.
 
 ### Using the library locally
 If you want to import this node module into a local sandbox app for testing without having to publish to NPM, then do this in the lib-ui directory:

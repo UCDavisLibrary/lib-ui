@@ -9,9 +9,9 @@
   border: none;
   background-color: $primary;
 
+  color: #fff;
   font-size: .95rem;
   letter-spacing: 1px;
-  color: #fff;
 
   transition: all .2s;
 
@@ -25,12 +25,44 @@
     }
   }
 
-  .arrow {
-    display: block;
-    margin-left: .5rem;
+  &.primary {
+    background-color: $primary;
 
-    color: $secondary;
+    color: #fff;
 
-    transition: all .2s;
+    &:hover {
+      background-color: $ucd-blue700;
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary;
+
+    color: #fff;
+
+    &:hover {
+      background-color: $ucd-gold700;
+    }
+  }
+
+  &.arrow {
+    .arrow {
+      display: block;
+      margin-left: .5rem;
+
+      color: $secondary;
+
+      transition: all .2s;
+    }
+  }
+
+  &.ghost {
+    background-color: rgba(0, 0, 0, 0);
+
+    color: rgba(0, 0, 0, .7);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .1);
+    }
   }
 }
