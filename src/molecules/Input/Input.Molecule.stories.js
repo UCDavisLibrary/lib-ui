@@ -37,7 +37,7 @@ storiesOf('Molecules/Input', module)
       * Each input's **placeholder** prop can be overridden.
     `)
     (() => (
-      <table cellPadding="16" style={{ backgroundColor: 'hsl(0, 0%, 97%)' }}>
+      <table cellPadding="16">
         <thead style={{ backgroundColor: 'hsl(0, 0%, 90%)' }}>
           <tr>
             <th>Type</th>

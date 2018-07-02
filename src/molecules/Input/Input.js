@@ -39,7 +39,7 @@ export class Input extends Component {
     return (
       <div className={`Molecule-Input ${ size } ${ className }`}>
         <label htmlFor={ name }>
-          <span>{ label }</span>
+          <span className="label-text">{ label }</span>
           { required && <span className="asterisk">*</span> }
         </label>
         <Atoms.Input type={ type }

@@ -9,8 +9,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: .3rem;
-    font-size: .95rem; }
+    margin-bottom: .3rem; }
+    .Molecule-Input label .label-text {
+      font-family: "Montserrat", system, sans-serif;
+      font-size: .95rem; }
     .Molecule-Input label .asterisk {
       display: inline-block;
       margin-left: .2rem;

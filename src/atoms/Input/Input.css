@@ -5,6 +5,7 @@
 /* lib-ui Theme */
 .Atom-Input {
   padding: .7rem;
+  background-color: #f7f7f7;
   border: none;
   border-bottom: 2px solid #DAAA00;
   font-size: .95rem;
