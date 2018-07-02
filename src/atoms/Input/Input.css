@@ -1,13 +1,21 @@
 /* Material Design box shadow */
 /* Input inset box-shadow */
+/* UC Davis Visual Identity Colors */
+/* Material Design colors */
+/* lib-ui Theme */
 .Atom-Input {
-  padding: .7rem 1.2rem;
+  padding: .7rem;
   border: none;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-bottom: 2px solid #DAAA00;
   font-size: .95rem;
+  transition: all .2s linear;
   /**
    * 'size' prop
    */ }
+  .Atom-Input:focus {
+    border-bottom-color: #002855; }
+  .Atom-Input:required:invalid {
+    border-bottom-color: #F44336; }
   .Atom-Input.sm {
-    padding: .5rem 1rem;
+    padding: .5rem;
     font-size: .8rem; }

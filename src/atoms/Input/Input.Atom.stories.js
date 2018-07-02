@@ -33,7 +33,6 @@ storiesOf('Atoms/Input', module)
       Simple inputs fields.
 
       ## Usage
-      * Don't forget to assign refs to the input's parent component.
       * Each input's **placeholder** prop can be overridden.
     `)
     (() => (

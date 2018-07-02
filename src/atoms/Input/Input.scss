@@ -1,17 +1,27 @@
 @import '../../theme/variables/_shadows.scss';
+@import '../../theme/variables/_colors.scss';
 
 .Atom-Input {
-  padding: .7rem 1.2rem;
+  padding: .7rem;
   border: none;
-  box-shadow: $box-shadow-inset;
+  border-bottom: 2px solid $secondary;
 
   font-size: .95rem;
+
+  transition: all .2s linear;
+
+  &:focus {
+    border-bottom-color: $primary;
+  }
+  &:required:invalid {
+    border-bottom-color: $red;
+  }
 
   /**
    * 'size' prop
    */
   &.sm {
-    padding: .5rem 1rem;
+    padding: .5rem;
     font-size: .8rem;
   }
 }

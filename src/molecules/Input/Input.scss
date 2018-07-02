@@ -1,19 +1,54 @@
 @import '../../theme/variables/_typography.scss';
+@import '../../theme/variables/_colors.scss';
 
 .Molecule-Input {
   label {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     margin-bottom: .3rem;
 
-    font-family: $font-display;
+    // font-family: $font-display;
     font-size: .95rem;
+    // font-weight: 700;
+
+    .asterisk {
+      display: inline-block;
+      margin-left: .2rem;
+
+      color: $red;
+    }
   }
 
+  .assistive-text {
+    margin-top: .3rem;
+    font-size: .8rem;
+
+    color: $secondary-dark-text;
+
+    .asterisk {
+      display: inline-block;
+      margin-right: .2rem;
+
+      color: $red;
+    }
+  }
+
+  /**
+   * 'size' prop
+   */
   &.sm {
     label {
       margin-bottom: .2rem;
 
       font-size: .8rem;
+    }
+
+    .assistive-text {
+      margin-top: .2rem;
+
+      font-size: .7rem;
     }
   }
 }

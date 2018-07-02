@@ -1,3 +1,10 @@
+/* Disable blue glow on inputs */
+input, textarea {
+  outline: none; }
+
+/* UC Davis Visual Identity Colors */
+/* Material Design colors */
+/* lib-ui Theme */
 * {
   font-family: "Open Sans", system, sans-serif; }
 

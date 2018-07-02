@@ -21,6 +21,12 @@ $ucd-gold700: #E1BB33;
 $ucd-gold800: #DEB31A;
 $ucd-gold900: #DAAA00;
 
+/* Material Design colors */
+$red: #F44336;
+
 /* lib-ui Theme */
 $primary: $ucd-blue900;
 $secondary: $ucd-gold900;
+
+$primary-dark-text: rgba(0, 0, 0, .84);
+$secondary-dark-text: rgba(0, 0, 0, .6);
