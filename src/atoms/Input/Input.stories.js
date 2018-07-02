@@ -16,12 +16,12 @@ storiesOf('Atoms/Input', module)
 
         <h2>Do</h2>
         <ul>
-          <li>WIP</li>
+          <li>Use these to build <code>Molecules.Input</code> components!</li>
         </ul>
 
         <h2>Don't</h2>
         <ul>
-          <li>WIP</li>
+          <li>You probably don't need these raw <code>Atom.Input</code> components in your final product. These are simply the building blocks used in the <code>Molecules.Input</code> components which include labels and other such standards.</li>
         </ul>
       </div>
     ))
