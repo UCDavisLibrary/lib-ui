@@ -1,10 +1,6 @@
 @import '../../theme/variables/_colors.scss';
 
 .Atom-Button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: .7rem 1.2rem;
   border: none;
   background-color: $primary;
@@ -14,6 +10,12 @@
   letter-spacing: 1px;
 
   transition: all .2s;
+
+  .children-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &:hover {
     background-color: $ucd-blue700;

@@ -14,7 +14,8 @@ const inputProps = {
 };
 
 const defaultInputProps = {
-  size: 'md'
+  size: 'md',
+  className: ''
 }
 
 export class Input extends Component {
@@ -23,7 +24,7 @@ export class Input extends Component {
     const { type, size, name, label, className, ...props } = this.props;
 
     return (
-      <div className={`Molecule-Input ${ size } ${ true && className }`}
+      <div className={`Molecule-Input ${ size } ${ className }`}
            { ...props }>
         <label htmlFor={ name }>{ label }</label>
         <Atoms.Input type={ type } size={ size } name={ name } />

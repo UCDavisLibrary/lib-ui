@@ -1,10 +1,9 @@
-.Molecule-Input {
-  display: block; }
-  .Molecule-Input label {
-    display: block;
-    margin-bottom: .3rem;
-    font-family: "Montserrat", system, sans-serif;
-    font-size: .95rem; }
-  .Molecule-Input.sm label {
-    margin-bottom: .2rem;
-    font-size: .8rem; }
+.Molecule-Input label {
+  display: block;
+  margin-bottom: .3rem;
+  font-family: "Montserrat", system, sans-serif;
+  font-size: .95rem; }
+
+.Molecule-Input.sm label {
+  margin-bottom: .2rem;
+  font-size: .8rem; }

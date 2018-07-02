@@ -11,7 +11,8 @@ const inputProps = {
 };
 
 const defaultInputProps = {
-  size: 'md'
+  size: 'md',
+  className: ''
 }
 
 export class Input extends Component {
@@ -31,7 +32,7 @@ export class Input extends Component {
     const { className, size, name, placeholder, ...props } = this.props;
 
     return (
-      <input className={`Atom-Input ${ size } ${ true && className }`}
+      <input className={`Atom-Input ${ size } ${ className }`}
              name={ name }
              placeholder={ placeholder || this.getPlaceholder() }
              { ...props } />

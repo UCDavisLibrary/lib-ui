@@ -14,16 +14,19 @@ const buttonProps = {
 const buttonDefaultProps = {
   onClick: () => {},
   type: 'primary',
-  size: 'md'
+  size: 'md',
+  className: ''
 }
 
 export const Button = ({ children, onClick, type, size, className, ...props }) => {
   return (
-    <button className={`Atom-Button ${ type } ${ size } ${ true && className }`}
+    <button className={`Atom-Button ${ type } ${ size } ${ className }`}
             onClick={ onClick }
             { ...props }>
-      <div>{ children }</div>
-      { type === 'arrow' && <span className="arrow">&rarr;</span> }
+      <div className="children-wrapper">
+        <div>{ children }</div>
+        { type === 'arrow' && <span className="arrow">&rarr;</span> }
+      </div>
     </button>
   )
 }
