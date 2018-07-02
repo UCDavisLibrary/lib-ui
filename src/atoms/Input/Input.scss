@@ -1,0 +1,17 @@
+@import '../../theme/variables/_shadows.scss';
+
+.Input {
+  padding: .7rem 1.2rem;
+  border: none;
+  box-shadow: $box-shadow-inset;
+
+  font-size: .95rem;
+
+  /**
+   * 'size' prop
+   */
+  &.sm {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+  }
+}

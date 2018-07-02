@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
-import { Button, ArrowButton } from 'atoms';
+import { Button } from 'atoms';
 
 storiesOf('Atoms/Buttons', module)
   .add(
