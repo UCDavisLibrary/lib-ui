@@ -1,6 +1,6 @@
 /* UC Davis Visual Identity Colors */
 /* lib-ui Theme */
-.libui-Button {
+.Atom-Button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,31 +17,31 @@
   /**
    * 'size' prop
    */ }
-  .libui-Button:hover {
+  .Atom-Button:hover {
     background-color: #335379;
     cursor: pointer; }
-    .libui-Button:hover .arrow {
+    .Atom-Button:hover .arrow {
       transform: translateX(2px); }
-  .libui-Button.primary {
+  .Atom-Button.primary {
     background-color: #002855;
     color: #fff; }
-    .libui-Button.primary:hover {
+    .Atom-Button.primary:hover {
       background-color: #335379; }
-  .libui-Button.secondary {
+  .Atom-Button.secondary {
     background-color: #DAAA00;
     color: #fff; }
-    .libui-Button.secondary:hover {
+    .Atom-Button.secondary:hover {
       background-color: #E1BB33; }
-  .libui-Button.arrow .arrow {
+  .Atom-Button.arrow .arrow {
     display: block;
     margin-left: .5rem;
     color: #DAAA00;
     transition: all .2s; }
-  .libui-Button.ghost {
+  .Atom-Button.ghost {
     background-color: rgba(0, 0, 0, 0);
     color: rgba(0, 0, 0, 0.7); }
-    .libui-Button.ghost:hover {
+    .Atom-Button.ghost:hover {
       background-color: rgba(0, 0, 0, 0.1); }
-  .libui-Button.sm {
+  .Atom-Button.sm {
     padding: .5rem 1rem;
     font-size: .8rem; }

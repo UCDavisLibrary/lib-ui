@@ -1,0 +1,21 @@
+@import '../../theme/variables/_typography.scss';
+
+.Molecule-Input {
+  display: block;
+
+  label {
+    display: block;
+    margin-bottom: .3rem;
+
+    font-family: $font-display;
+    font-size: .95rem;
+  }
+
+  &.sm {
+    label {
+      margin-bottom: .2rem;
+
+      font-size: .8rem;
+    }
+  }
+}

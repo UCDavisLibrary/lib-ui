@@ -6,7 +6,8 @@ import './Input.css';
 const inputProps = {
   type: PropTypes.oneOf(['text', 'email', 'password']),
   size: PropTypes.oneOf(['sm', 'md']),
-  className: PropTypes.string
+  className: PropTypes.string,
+  name: PropTypes.string.isRequired
 };
 
 const defaultInputProps = {
@@ -27,10 +28,11 @@ export class Input extends Component {
   }
 
   render() {
-    const { className, size, placeholder, ...props } = this.props;
+    const { className, size, name, placeholder, ...props } = this.props;
 
     return (
-      <input className={`Input ${ size } ${ true && className }`}
+      <input className={`Atom-Input ${ size } ${ true && className }`}
+             name={ name }
              placeholder={ placeholder || this.getPlaceholder() }
              { ...props } />
     )

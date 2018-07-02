@@ -27,7 +27,7 @@ storiesOf('Atoms/Input', module)
     ))
   )
   .add(
-    'Text Input',
+    'Text Inputs',
     withInfo(`
       ## About
       Simple inputs fields.
@@ -49,28 +49,28 @@ storiesOf('Atoms/Input', module)
           <tr>
             <td>text <strong>(default)</strong></td>
             <td>
-              <Input type="text" />
+              <Input type="text" name="input1" />
             </td>
             <td>
-              <Input type="text" size="sm" />
+              <Input type="text" size="sm" name="input1sm" />
             </td>
           </tr>
           <tr>
             <td>email</td>
             <td>
-              <Input type="email" />
+              <Input type="email" name="input2" />
             </td>
             <td>
-              <Input type="email" size="sm" />
+              <Input type="email" size="sm" name="input2sm" />
             </td>
           </tr>
           <tr>
             <td>password</td>
             <td>
-              <Input type="password" />
+              <Input type="password" name="input3" />
             </td>
             <td>
-              <Input type="password" size="sm" />
+              <Input type="password" size="sm" name="input3sm" />
             </td>
           </tr>
         </tbody>

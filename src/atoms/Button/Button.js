@@ -19,7 +19,7 @@ const buttonDefaultProps = {
 
 export const Button = ({ children, onClick, type, size, className, ...props }) => {
   return (
-    <button className={`libui-Button ${ type } ${ size } ${ true && className }`}
+    <button className={`Atom-Button ${ type } ${ size } ${ true && className }`}
             onClick={ onClick }
             { ...props }>
       <div>{ children }</div>
