@@ -11,6 +11,7 @@ const dialogProps = {
   title: PropTypes.string.isRequired,
   submitText: PropTypes.string,
   cancelText: PropTypes.string,
+  dismissOnBackdropClick: PropTypes.bool,
   show: PropTypes.bool,
   dismiss: PropTypes.func,
   submit: PropTypes.func,
@@ -20,6 +21,7 @@ const dialogProps = {
 const defaultProps = {
   submitText: "Submit",
   cancelText: "Cancel",
+  dismissOnBackdropClick: false,
   show: false
 };
 
@@ -52,7 +54,7 @@ export class Dialog extends Component {
   }
 
   renderDialog = ( transitionState ) => {
-    const { show, title, submitText, cancelText, children } = this.props;
+    const { show, dismissOnBackdropClick, title, submitText, cancelText, children } = this.props;
 
     this.hideOverflow();
 
@@ -81,7 +83,7 @@ export class Dialog extends Component {
           </div>
         </CSSTransition>
 
-        <div className="backdrop" onClick={ this.dismiss } />
+        <div className="backdrop" onClick={ dismissOnBackdropClick ? this.dismiss : () => {} } />
       </div>
     )
   }

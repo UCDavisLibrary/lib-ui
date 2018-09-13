@@ -83,6 +83,7 @@ class DialogStory extends React.Component {
         <Dialog title="This is a dialog"
                 submitText="Submit"
                 cancelText="Cancel"
+                dismissOnBackdropClick
                 show={ this.state.show }
                 dismiss={ this.dismissDialog }
                 submit={ this.submitDialog }>
