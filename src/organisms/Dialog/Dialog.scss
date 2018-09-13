@@ -1,5 +1,6 @@
 @import '../../theme/variables/_typography.scss';
 @import '../../theme/variables/_colors.scss';
+@import '../../theme/variables/_shadows.scss';
 
 .Dialog {
 
@@ -34,8 +35,8 @@
       max-height: calc( 100vh - 32px );
       max-width: calc( 100% - 32px );
       width: 320px;
-
       background-color: #fff;
+      box-shadow: $box-shadow1;
 
       z-index: 920;
 

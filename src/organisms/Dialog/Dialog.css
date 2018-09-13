@@ -1,6 +1,8 @@
 /* UC Davis Visual Identity Colors */
 /* Material Design colors */
 /* lib-ui Theme */
+/* Material Design box shadow */
+/* Input inset box-shadow */
 .Dialog .dialogContainer {
   display: flex;
   align-items: center;
@@ -29,6 +31,7 @@
     max-width: calc( 100% - 32px);
     width: 320px;
     background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     z-index: 920; }
     .Dialog .dialogContainer .dialog .title {
       padding: 1rem;
