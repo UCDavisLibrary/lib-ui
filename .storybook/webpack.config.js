@@ -16,6 +16,11 @@ module.exports = {
         test: /\.css$/,
 				exclude: /node_modules/,
         loader: [ 'style-loader', 'css-loader' ]
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loaders: ['file-loader'],
+        include: /fonts/
       }
     ],
   },

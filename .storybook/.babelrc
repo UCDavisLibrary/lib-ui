@@ -12,6 +12,8 @@
                 "utils": "./src/utils",
                 "theme": "./src/theme",
                 "atoms": "./src/atoms",
+                "molecules": "./src/molecules",
+                "organisms": "./src/organisms",
                 "styles": "./src/styles"
             }
         }]

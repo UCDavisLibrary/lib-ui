@@ -37,7 +37,8 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "react": "^16.4.1"
+    "react": "^16.4.1",
+    "react-transition-group": "^2.4.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",

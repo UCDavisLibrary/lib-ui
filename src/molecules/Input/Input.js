@@ -19,7 +19,7 @@ const defaultInputProps = {
   value: '',
   size: 'md',
   className: ''
-}
+};
 
 export class Input extends Component {
 

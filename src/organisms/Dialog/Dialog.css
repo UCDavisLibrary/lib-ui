@@ -1,0 +1,79 @@
+/* UC Davis Visual Identity Colors */
+/* Material Design colors */
+/* lib-ui Theme */
+.Dialog .dialogContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900; }
+  .Dialog .dialogContainer .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 910; }
+  .Dialog .dialogContainer .dialog {
+    position: relative;
+    max-height: calc( 100vh - 32px);
+    max-width: calc( 100% - 32px);
+    width: 320px;
+    background-color: #fff;
+    z-index: 920; }
+    .Dialog .dialogContainer .dialog .title {
+      padding: 1rem;
+      font-size: 1.2rem; }
+    .Dialog .dialogContainer .dialog .content {
+      box-sizing: border-box;
+      padding: 0 1rem 1rem;
+      overflow-y: auto; }
+    .Dialog .dialogContainer .dialog .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.05); }
+      .Dialog .dialogContainer .dialog .actions button {
+        margin-left: .4rem; }
+
+.Dialog .backdrop-enter {
+  opacity: 0.01; }
+
+.Dialog .backdrop-enter-active {
+  opacity: 1;
+  transition: opacity 200ms linear; }
+
+.Dialog .backdrop-exit {
+  opacity: 1; }
+
+.Dialog .backdrop-exit-active {
+  opacity: 0.01;
+  transition: opacity 200ms linear; }
+
+.Dialog .dialog-enter {
+  opacity: 0.01;
+  transform: translateY(10%); }
+
+.Dialog .dialog-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 200ms linear; }
+
+.Dialog .dialog-exit {
+  opacity: 1;
+  transform: translateY(0); }
+
+.Dialog .dialog-exit-active {
+  opacity: 0.01;
+  transform: translateY(-10%);
+  transition: all 200ms linear; }

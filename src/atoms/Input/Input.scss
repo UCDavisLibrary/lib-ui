@@ -2,6 +2,7 @@
 @import '../../theme/variables/_colors.scss';
 
 .Atom-Input {
+  box-sizing: border-box;
   padding: .7rem;
   background-color: hsl(0, 0%, 97%);
   border: none;
