@@ -15,6 +15,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .children {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &:hover {

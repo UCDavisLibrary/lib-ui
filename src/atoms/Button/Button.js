@@ -24,7 +24,7 @@ export const Button = ({ children, onClick, type, size, className, ...props }) =
             onClick={ onClick }
             { ...props }>
       <div className="children-wrapper">
-        <div>{ children }</div>
+        <div className="children">{ children }</div>
         { type === 'arrow' && <span className="arrow">&rarr;</span> }
       </div>
     </button>
