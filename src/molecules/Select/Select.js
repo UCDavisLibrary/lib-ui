@@ -36,7 +36,7 @@ export class Select extends Component {
     const { type, size, name, label, value, assistiveText, className, options, required, ...props } = this.props;
 
     return (
-      <div className={`Molecule-Input ${ size } ${ className }`}>
+      <div className={`Molecule-Select ${ size } ${ className }`}>
         <label htmlFor={ name }>
           <span className="label-text">{ label }</span>
           { required && <span className="asterisk">*</span> }
