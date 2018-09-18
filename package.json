@@ -37,7 +37,8 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "react": "^16.4.1",
+    "material-icons": "^0.2.3",
+    "react": "^16.5.1",
     "react-transition-group": "^2.4.0"
   },
   "scripts": {

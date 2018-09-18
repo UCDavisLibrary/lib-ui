@@ -67,7 +67,7 @@ export class Dialog extends Component {
                        onExited={() => {}}>
           <div className="dialog">
             <div className="title">
-              This is a dialog
+              { title }
             </div>
             <div className="content">
               { children }

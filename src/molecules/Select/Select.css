@@ -1,0 +1,33 @@
+/* UC Davis Visual Identity Colors */
+/* Material Design colors */
+/* lib-ui Theme */
+.Molecule-Select {
+  /**
+   * 'size' prop
+   */ }
+  .Molecule-Select label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: .3rem; }
+    .Molecule-Select label .label-text {
+      font-family: "Cereal", serif, system, sans-serif;
+      font-size: .95rem; }
+    .Molecule-Select label .asterisk {
+      display: inline-block;
+      margin-left: .2rem;
+      color: #F44336; }
+  .Molecule-Select .assistive-text {
+    margin-top: .3rem;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.6); }
+    .Molecule-Select .assistive-text .asterisk {
+      display: inline-block;
+      margin-right: .2rem;
+      color: #F44336; }
+  .Molecule-Select.sm label {
+    margin-bottom: .2rem;
+    font-size: .8rem; }
+  .Molecule-Select.sm .assistive-text {
+    margin-top: .2rem;
+    font-size: .7rem; }

@@ -1,5 +1,8 @@
 /* Disable blue glow on inputs */
-input, textarea, button {
+input,
+textarea,
+button,
+select {
   outline: none; }
 
 @font-face {

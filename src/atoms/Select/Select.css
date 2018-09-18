@@ -1,0 +1,54 @@
+/* Material Design box shadow */
+/* Input inset box-shadow */
+/* UC Davis Visual Identity Colors */
+/* Material Design colors */
+/* lib-ui Theme */
+.Select {
+  position: relative;
+  /**
+   * 'size' prop
+   */ }
+  .Select.unselected select {
+    color: rgba(0, 0, 0, 0.6); }
+  .Select select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: .7rem 4rem .7rem .7rem;
+    background-color: #f7f7f7;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #DAAA00;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: .95rem;
+    transition: all .2s linear; }
+    .Select select:focus {
+      border-bottom-color: #002855; }
+    .Select select:required:invalid {
+      border-bottom-color: #F44336; }
+  .Select.sm select {
+    padding: .5rem 2.5rem .5rem .5rem;
+    font-size: .8rem; }
+  .Select.sm:after {
+    top: 7px;
+    right: .7rem;
+    font-size: .6rem; }
+  .Select:after {
+    content: '\25E2';
+    color: #DAAA00;
+    font-family: sans-serif;
+    font-size: .7rem;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 9px;
+    right: 1rem;
+    position: absolute;
+    pointer-events: none;
+    transition: color .2s linear; }
+  .Select:focus-within:after {
+    color: #002855; }
+  .Select.required.unselected:after {
+    color: #F44336; }
