@@ -6,6 +6,7 @@
   padding: .7rem 1.2rem;
   border: none;
   background-color: #002855;
+  overflow: hidden;
   color: #fff;
   font-size: .95rem;
   letter-spacing: 1px;
@@ -56,25 +57,24 @@
   .Atom-Button.sm {
     padding: .5rem 1rem;
     font-size: .8rem; }
-  .Atom-Button .fade-enter {
-    opacity: 0; }
-  .Atom-Button .fade-enter-active {
-    opacity: 1;
-    transition: all 200ms linear; }
-  .Atom-Button .fade-exit {
-    opacity: 1; }
-  .Atom-Button .fade-exit-active {
+  .Atom-Button .spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
     opacity: 0;
     transition: all 200ms linear; }
-  .Atom-Button .fade-exit-done {
+  .Atom-Button .content {
+    opacity: 1;
+    transition: all 200ms linear; }
+    .Atom-Button .content .children, .Atom-Button .content .arrow {
+      transition: all 200ms ease-in; }
+  .Atom-Button.loading .spinner {
+    opacity: 1; }
+  .Atom-Button.loading .content {
     opacity: 0; }
-  .Atom-Button .spinner {
-    position: relative;
-    height: 100%;
-    width: 100%; }
-    .Atom-Button .spinner > span {
-      position: absolute !important; }
-  .Atom-Button.md .spinner > span {
-    top: -19px; }
-  .Atom-Button.sm .spinner > span {
-    top: -17px; }
+    .Atom-Button.loading .content .children, .Atom-Button.loading .content .arrow {
+      transform: translateX(2rem); }

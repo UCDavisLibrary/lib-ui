@@ -5,6 +5,7 @@
   padding: .7rem 1.2rem;
   border: none;
   background-color: $primary;
+  overflow: hidden;
 
   color: #fff;
   font-size: .95rem;
@@ -88,37 +89,35 @@
   /**
    * Animation
    */
-  .fade-enter {
-   opacity: 0;
-  }
-  .fade-enter-active {
-   opacity: 1;
-   transition: all 200ms linear;
-  }
-  .fade-exit {
-   opacity: 1;
-  }
-  .fade-exit-active {
-   opacity: 0;
-   transition: all 200ms linear;
-  }
-  .fade-exit-done {
-   opacity: 0;
-  }
-
   .spinner {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     width: 100%;
+    opacity: 0;
+    transition: all 200ms linear;
+  }
+  .content {
+    opacity: 1;
+    transition: all 200ms linear;
 
-    & > span {
-      position: absolute !important;
+    .children, .arrow {
+      transition: all 200ms ease-in;
     }
   }
-  &.md .spinner > span {
-    top: -19px;
-  }
-  &.sm .spinner > span {
-    top: -17px;
+  &.loading {
+    .spinner {
+      opacity: 1;
+    }
+    .content {
+      opacity: 0;
+
+      .children, .arrow {
+        transform: translateX( 2rem );
+      }
+    }
   }
 }
