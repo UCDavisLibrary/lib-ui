@@ -49,7 +49,7 @@ storiesOf('Atoms/Buttons', module)
       <table cellPadding="16" style={{ backgroundColor: 'hsl(0, 0%, 97%)' }}>
         <thead style={{ backgroundColor: 'hsl(0, 0%, 90%)' }}>
           <tr>
-            <th>Type</th>
+            <th>Variant</th>
             <th>Size: md (default)</th>
             <th>Size: sm</th>
           </tr>
@@ -71,12 +71,12 @@ storiesOf('Atoms/Buttons', module)
           <tr>
             <td>Secondary</td>
             <td>
-              <Button type="secondary" onClick={action('secondary button click')}>
+              <Button variant="secondary" onClick={action('secondary button click')}>
                 Submit
               </Button>
             </td>
             <td>
-              <Button size="sm" type="secondary" onClick={action('secondary button click')}>
+              <Button size="sm" variant="secondary" onClick={action('secondary button click')}>
                 Submit
               </Button>
             </td>
@@ -84,12 +84,12 @@ storiesOf('Atoms/Buttons', module)
           <tr>
             <td>Ghost</td>
             <td>
-              <Button type="ghost" onClick={action('ghost button click')}>
+              <Button variant="ghost" onClick={action('ghost button click')}>
                 Cancel
               </Button>
             </td>
             <td>
-              <Button size="sm" type="ghost" onClick={action('ghost button click')}>
+              <Button size="sm" variant="ghost" onClick={action('ghost button click')}>
                 Cancel
               </Button>
             </td>
@@ -97,12 +97,25 @@ storiesOf('Atoms/Buttons', module)
           <tr>
             <td>Arrow</td>
             <td>
-              <Button type="arrow" onClick={action('arrow button click')}>
+              <Button variant="arrow" onClick={action('arrow button click')}>
                 Get started
               </Button>
             </td>
             <td>
-              <Button size="sm" type="arrow" onClick={action('arrow button click')}>
+              <Button size="sm" variant="arrow" onClick={action('arrow button click')}>
+                Get started
+              </Button>
+            </td>
+          </tr>
+          <tr>
+            <td>Arrow<br/>(with attribute type="submit")</td>
+            <td>
+              <Button variant="arrow" type="submit" onClick={ () => { console.log('Console click') } }>
+                Get started
+              </Button>
+            </td>
+            <td>
+              <Button size="sm" variant="arrow" type="submit" onClick={ () => { console.log('Console click') } }>
                 Get started
               </Button>
             </td>

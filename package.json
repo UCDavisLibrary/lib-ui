@@ -39,6 +39,7 @@
   "dependencies": {
     "material-icons": "^0.2.3",
     "react": "^16.5.1",
+    "react-md-spinner": "^0.3.0",
     "react-transition-group": "^2.4.0"
   },
   "scripts": {

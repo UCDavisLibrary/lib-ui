@@ -1,6 +1,7 @@
 @import '../../theme/variables/_colors.scss';
 
 .Atom-Button {
+  position: relative;
   padding: .7rem 1.2rem;
   border: none;
   background-color: $primary;
@@ -15,6 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 
     .children {
       display: flex;
@@ -80,5 +83,42 @@
   &.sm {
     padding: .5rem 1rem;
     font-size: .8rem;
+  }
+
+  /**
+   * Animation
+   */
+  .fade-enter {
+   opacity: 0;
+  }
+  .fade-enter-active {
+   opacity: 1;
+   transition: all 200ms linear;
+  }
+  .fade-exit {
+   opacity: 1;
+  }
+  .fade-exit-active {
+   opacity: 0;
+   transition: all 200ms linear;
+  }
+  .fade-exit-done {
+   opacity: 0;
+  }
+
+  .spinner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    & > span {
+      position: absolute !important;
+    }
+  }
+  &.md .spinner > span {
+    top: -19px;
+  }
+  &.sm .spinner > span {
+    top: -17px;
   }
 }
