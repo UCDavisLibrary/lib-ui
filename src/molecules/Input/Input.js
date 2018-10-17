@@ -23,18 +23,9 @@ const defaultInputProps = {
 
 export class Input extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      value: props.value
-    };
-  }
-
-  handleChange = ({ target }) => this.setState({ value: target.value })
 
   render() {
-    const { type, size, name, label, value, assistiveText, className, required, ...props } = this.props;
+    const { type, size, name, label, value, assistiveText, className, required } = this.props;
 
     return (
       <div className={`Molecule-Input ${ size } ${ className }`}>
@@ -42,13 +33,12 @@ export class Input extends Component {
           <span className="label-text">{ label }</span>
           { required && <span className="asterisk">*</span> }
         </label>
-        <Atoms.Input type={ type }
+        <Atoms.Input ref={ c => this.input = c }
+                     type={ type }
                      size={ size }
                      name={ name }
                      value={ value }
-                     onChange={ this.handleChange }
-                     required={ required }
-                     { ...props } />
+                     required={ required } />
         <div className="assistive-text">
           {
             required &&

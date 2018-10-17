@@ -19,6 +19,20 @@ const defaultInputProps = {
 
 export class Input extends Component {
 
+  constructor( props ) {
+    super( props );
+
+    this.state = {
+      value: props.value
+    };
+  }
+
+  componentWillReceiveProps( nextProps ) {
+    if( nextProps.value !== this.state.value ) {
+      this.setState({ value: nextProps.value });
+    }
+  }
+
   getPlaceholder = () => {
     const { type } = this.props;
 
@@ -30,16 +44,20 @@ export class Input extends Component {
     }
   }
 
+  handleChange = ({ target }) => {
+    this.setState({ value: target.value });
+  }
+
   render() {
     const { className, size, name, placeholder, value, required, ...props } = this.props;
 
     return (
       <input className={`Atom-Input ${ size } ${ className }`}
              name={ name }
-             defaultValue={ value }
+             value={ this.state.value }
              placeholder={ placeholder || this.getPlaceholder() }
              required={ required }
-             { ...props } />
+             onChange={ this.handleChange } />
     )
   }
 }
