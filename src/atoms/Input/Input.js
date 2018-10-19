@@ -44,12 +44,18 @@ export class Input extends Component {
     }
   }
 
-  handleChange = ({ target }) => {
-    this.setState({ value: target.value });
+  handleChange = ( e ) => {
+    const { onChange } = this.props;
+
+    if( onChange ) {
+      onChange( e );
+    }
+
+    this.setState({ value: e.target.value });
   }
 
   render() {
-    const { className, size, name, placeholder, value, required, ...props } = this.props;
+    const { className, size, name, placeholder, value, onChange, required, ...props } = this.props;
 
     return (
       <input className={`Atom-Input ${ size } ${ className }`}
