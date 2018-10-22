@@ -89,7 +89,7 @@
   /**
    * Animation
    */
-  .spinner {
+  .loader {
     position: absolute;
     top: 0;
     left: 0;
@@ -109,7 +109,7 @@
     }
   }
   &.loading {
-    .spinner {
+    .loader {
       opacity: 1;
     }
     .content {

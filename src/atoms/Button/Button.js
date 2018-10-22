@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-import MDSpinner from 'react-md-spinner';
+import { Loader } from '../Loader';
 import { CSSTransition } from 'react-transition-group';
 
 const buttonProps = {
@@ -34,9 +34,8 @@ export class Button extends Component {
     e.stopPropagation();
 
     const { type, onClick } = this.props;
-    const { loading } = this.state;
 
-    if( !loading ) {
+    if( !this.state.loading ) {
       if( type === 'submit' ) {
         this.setState( { loading: true }, onClick );
       } else {
@@ -49,12 +48,8 @@ export class Button extends Component {
     const { size } = this.props;
 
     return (
-      <div className="children-wrapper spinner">
-        <MDSpinner size={ size === 'sm' ? 17 : 19 }
-                   color1="#FFF"
-                   color2="#FFF"
-                   color3="#FFF"
-                   color4="#FFF" />
+      <div className="children-wrapper loader">
+        <Loader variant="white" size="sm" />
       </div>
     )
   }

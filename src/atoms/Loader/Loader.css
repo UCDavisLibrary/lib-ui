@@ -1,0 +1,61 @@
+/* UC Davis Visual Identity Colors */
+/* Material Design colors */
+/* lib-ui Theme */
+.Loader {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  .Loader.md {
+    height: 2rem; }
+    .Loader.md > div {
+      bottom: -1rem;
+      width: 1rem;
+      height: 1rem;
+      margin: 0 0.2rem; }
+    .Loader.md.default > div {
+      animation: bounce-md 0.6s infinite alternate, color-change 1.2s infinite alternate; }
+    .Loader.md.white > div {
+      background: #FFF;
+      animation: bounce-md 0.6s infinite alternate; }
+  .Loader.sm {
+    height: 1rem; }
+    .Loader.sm > div {
+      bottom: -.5rem;
+      width: .5rem;
+      height: .5rem;
+      margin: 0 0.1rem; }
+    .Loader.sm.default > div {
+      animation: bounce-sm 0.6s infinite alternate, color-change 1.2s infinite alternate; }
+    .Loader.sm.white > div {
+      background: #FFF;
+      animation: bounce-sm 0.6s infinite alternate; }
+  .Loader > div {
+    position: relative;
+    background: #002855;
+    border-radius: 50%; }
+  .Loader > div:nth-child(even) {
+    animation-delay: 0.2s !important; }
+  .Loader > div:nth-child(3) {
+    animation-delay: 0.4s !important; }
+
+@keyframes bounce-md {
+  from {
+    opacity: 1;
+    transform: translateY(0); }
+  to {
+    opacity: 0.1;
+    transform: translateY(-1rem); } }
+
+@keyframes bounce-sm {
+  from {
+    opacity: 1;
+    transform: translateY(0); }
+  to {
+    opacity: 0.1;
+    transform: translateY(-0.5rem); } }
+
+@keyframes color-change {
+  from {
+    background: #002855; }
+  to {
+    background: #DAAA00; } }

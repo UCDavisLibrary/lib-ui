@@ -57,7 +57,7 @@
   .Atom-Button.sm {
     padding: .5rem 1rem;
     font-size: .8rem; }
-  .Atom-Button .spinner {
+  .Atom-Button .loader {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +72,7 @@
     transition: all 200ms linear; }
     .Atom-Button .content .children, .Atom-Button .content .arrow {
       transition: all 200ms ease-in; }
-  .Atom-Button.loading .spinner {
+  .Atom-Button.loading .loader {
     opacity: 1; }
   .Atom-Button.loading .content {
     opacity: 0; }

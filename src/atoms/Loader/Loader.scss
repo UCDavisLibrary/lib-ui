@@ -1,0 +1,98 @@
+@import '../../theme/variables/_colors.scss';
+
+.Loader {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  // Sizes and variants
+  &.md {
+    height: 2rem;
+
+    & > div {
+      bottom: -1rem;
+      width: 1rem;
+      height: 1rem;
+      margin: 0 0.2rem;
+    }
+
+    // Variants
+    &.default {
+      & > div {
+        animation: bounce-md 0.6s infinite alternate, color-change 1.2s infinite alternate;
+      }
+    }
+    &.white {
+      & > div {
+        background: #FFF;
+        animation: bounce-md 0.6s infinite alternate;
+      }
+    }
+  }
+  &.sm {
+    height: 1rem;
+
+    & > div {
+      bottom: -.5rem;
+      width: .5rem;
+      height: .5rem;
+      margin: 0 0.1rem;
+    }
+
+    // Variants
+    &.default {
+      & > div {
+        animation: bounce-sm 0.6s infinite alternate, color-change 1.2s infinite alternate;
+      }
+    }
+    &.white {
+      & > div {
+        background: #FFF;
+        animation: bounce-sm 0.6s infinite alternate;
+      }
+    }
+  }
+
+  & > div {
+    position: relative;
+    background: $primary;
+    border-radius: 50%;
+  }
+  & > div:nth-child(even) {
+    animation-delay: 0.2s !important;
+  }
+  & > div:nth-child(3) {
+    animation-delay: 0.4s !important;
+  }
+}
+
+@keyframes bounce-md {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.1;
+    transform: translateY(-1rem);
+  }
+}
+@keyframes bounce-sm {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.1;
+    transform: translateY(-.5rem);
+  }
+}
+
+@keyframes color-change {
+  from {
+    background: $primary;
+  }
+  to {
+    background: $secondary;
+  }
+}
