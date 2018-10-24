@@ -10,7 +10,7 @@
   color: #fff;
   font-size: .95rem;
   letter-spacing: 1px;
-  transition: all .2s;
+  transition: all .2s linear;
   /**
    * 'type' prop
    */
@@ -34,6 +34,10 @@
     cursor: pointer; }
     .Atom-Button:hover .arrow {
       transform: translateX(2px); }
+  .Atom-Button:disabled {
+    filter: contrast(0.25) brightness(1.5); }
+    .Atom-Button:disabled:hover {
+      cursor: not-allowed; }
   .Atom-Button.primary {
     background-color: #002855;
     color: #fff; }

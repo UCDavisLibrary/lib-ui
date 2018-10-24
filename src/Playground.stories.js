@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
+import { Button } from './atoms';
 import { Input, Select } from './molecules';
 
 storiesOf('Playground', module)
@@ -60,6 +61,10 @@ class Playground extends React.Component {
                 options={ selectOptions }
                 value={ this.state.selectValue }
                 onChange={ this.handleSelect } />
+
+        <Button variant="arrow" onClick={action('arrow button click')} disabled={ true }>
+          Get started
+        </Button>
       </div>
     )
   }

@@ -10,6 +10,7 @@ const buttonProps = {
   onClick: PropTypes.func.isRequired,
   variant: PropTypes.oneOf([ 'primary', 'secondary', 'ghost', 'arrow' ]),
   size: PropTypes.oneOf([ 'sm', 'md' ]),
+  disabled: PropTypes.bool,
   className: PropTypes.string
 };
 
@@ -66,12 +67,13 @@ export class Button extends Component {
   }
 
   render() {
-    const { onClick, variant, size, type, className } = this.props;
+    const { onClick, variant, size, type, disabled, className } = this.props;
 
     return (
       <button className={ `Atom-Button ${ variant } ${ size } ${ className || '' } ${ this.state.loading ? 'loading' : '' }` }
               onClick={ this.handleClick }
-              type={ type }>
+              type={ type }
+              disabled={ disabled }>
         { this.renderChildren() }
         { this.renderLoader() }
       </button>
