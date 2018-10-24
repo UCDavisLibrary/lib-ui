@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
-import { Input } from './molecules';
+import { Input, Select } from './molecules';
 
 storiesOf('Playground', module)
   .add(
@@ -21,7 +21,8 @@ class Playground extends React.Component {
     super( props );
 
     this.state = {
-      workingTitle: 'hello'
+      workingTitle: 'hello',
+      selectValue: ''
     }
   }
 
@@ -31,12 +32,34 @@ class Playground extends React.Component {
     }, () => { console.log( this.state ) })
   }
 
+  handleSelect = ( e ) => {
+    this.setState({
+      selectValue: e.target.value
+    }, () => { console.log( this.state ) });
+  }
+
   render() {
+    const selectOptions = [
+      {
+        value: '',
+        text: '-- Select option --'
+      },
+      {
+        value: 'bwuh',
+        text: 'bwuh??'
+      }
+    ]
     return (
       <div>
-        <Input type="text" name="workingTitle" label="Working title" value={ this.state.workingTitle } />
-
+        <Input type="text" name="workingTitle" label="Working title" value={ this.state.workingTitle } onChange={( e ) => { this.setState({ workingTitle: e.target.value }) }} />
         <button onClick={ this.handleClick }>AKSJDNAS</button>
+
+        <Select type="text"
+                name="newPositionJob"
+                label="Job Appointment (PPS)"
+                options={ selectOptions }
+                value={ this.state.selectValue }
+                onChange={ this.handleSelect } />
       </div>
     )
   }

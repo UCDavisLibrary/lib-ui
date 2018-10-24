@@ -30,7 +30,15 @@ export class Select extends Component {
     };
   }
 
-  handleChange = ({ target }) => this.setState({ value: target.value })
+  handleChange = ( e ) => {
+    const { onChange } = this.props;
+
+    if( onChange ) {
+      onChange( e );
+    }
+
+    this.setState({ value: e.target.value });
+  }
 
   render() {
     const { type, size, name, label, value, assistiveText, className, options, required, ...props } = this.props;
@@ -46,8 +54,7 @@ export class Select extends Component {
                 size={ size }
                 options={ options }
                 onChange={ this.handleChange }
-                required={ required }
-                { ...props } />
+                required={ required } />
         <div className="assistive-text">
           {
             required &&
