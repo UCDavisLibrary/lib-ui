@@ -55,13 +55,14 @@ export class Input extends Component {
   }
 
   render() {
-    const { className, size, name, placeholder, value, onChange, required, ...props } = this.props;
+    const { className, size, name, placeholder, value, onChange, required, autocomplete } = this.props;
 
     return (
       <input className={`Atom-Input ${ size } ${ className }`}
              name={ name }
              value={ this.state.value }
              placeholder={ placeholder || this.getPlaceholder() }
+             autocomplete={ autocomplete }
              required={ required }
              onChange={ this.handleChange } />
     )
