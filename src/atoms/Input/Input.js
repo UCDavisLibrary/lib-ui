@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Input.css';
 import PropTypes from 'prop-types';
 
-import InputMask from 'react-input-mask';
+import MaskedInput from 'react-text-mask';
 
 const inputProps = {
   value: PropTypes.string,
@@ -66,17 +66,26 @@ export class Input extends Component {
              name={ name }
              value={ this.state.value }
              placeholder={ placeholder || this.getPlaceholder() }
-             autocomplete={ autocomplete }
+             autoComplete={ autocomplete }
              required={ required }
              onChange={ this.handleChange } />
     )
   }
 
-  renderInputWithMask = () => {
+  renderInputWithMask = ( mask ) => {
+    const { className, type, size, name, placeholder, value, onChange, required, autocomplete } = this.props;
+
     return (
-      <InputMask mask="(999) 999-9999" value={ this.state.value } onChange={ this.handleChange }>
-        { ( inputProps ) => this.renderDefaultInput() }
-      </InputMask>
+      <MaskedInput mask={[ '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/ ]}
+                   guide={ true }
+                   className={`Atom-Input ${ size } ${ className }`}
+                   type={ type }
+                   name={ name }
+                   value={ this.state.value }
+                   placeholder={ placeholder || this.getPlaceholder() }
+                   autoComplete={ autocomplete }
+                   required={ required }
+                   onChange={ this.handleChange } />
     )
   }
 
@@ -85,7 +94,7 @@ export class Input extends Component {
 
     switch ( type ) {
       case 'tel':
-        return this.renderInputWithMask();
+        return this.renderInputWithMask( '(999) 999-9999' );
       default:
         return this.renderDefaultInput();
     }

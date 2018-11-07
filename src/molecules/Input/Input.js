@@ -7,7 +7,7 @@ import * as Atoms from '../../atoms';
 
 const inputProps = {
   value: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'email', 'password']),
+  type: PropTypes.oneOf(['text', 'email', 'password', 'tel']),
   size: PropTypes.oneOf(['sm', 'md']),
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
