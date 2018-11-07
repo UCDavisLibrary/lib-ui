@@ -64,6 +64,15 @@ storiesOf('Atoms/Input', module)
             </td>
           </tr>
           <tr>
+            <td>tel</td>
+            <td>
+              <Input type="tel" name="inputTel" />
+            </td>
+            <td>
+              <Input type="tel" size="sm" name="inputTelSm" />
+            </td>
+          </tr>
+          <tr>
             <td>password</td>
             <td>
               <Input type="password" name="input3" />

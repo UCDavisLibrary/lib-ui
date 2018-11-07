@@ -65,6 +65,15 @@ storiesOf('Molecules/Input', module)
             </td>
           </tr>
           <tr>
+            <td>tel</td>
+            <td>
+              <Input type="tel" name="inputTel" label="Phone number" required />
+            </td>
+            <td>
+              <Input type="tel" size="sm" name="inputTelSm" label="Phone number" required />
+            </td>
+          </tr>
+          <tr>
             <td>password</td>
             <td>
               <Input type="password" name="input3" label="Password" assistiveText="At least 12 characters" />

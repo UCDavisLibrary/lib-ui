@@ -22,14 +22,14 @@ class Playground extends React.Component {
     super( props );
 
     this.state = {
-      workingTitle: 'hello',
+      phoneNumber: '(530) 555-5555',
       selectValue: ''
     }
   }
 
   handleClick = () => {
     this.setState({
-      workingTitle: 'world'
+      phoneNumber: '(530) 555-5551'
     }, () => { console.log( this.state ) })
   }
 
@@ -52,7 +52,9 @@ class Playground extends React.Component {
     ]
     return (
       <div>
-        <Input type="text" name="workingTitle" label="Working title" value={ this.state.workingTitle } onChange={( e ) => { this.setState({ workingTitle: e.target.value }) }} />
+        <Input type="tel" name="phoneNUmber" label="Phone number"
+               value={ this.state.phoneNumber }
+               onChange={( e ) => { this.setState({ phoneNumber: e.target.value }, () => { console.log(this.state) }) }} />
         <button onClick={ this.handleClick }>AKSJDNAS</button>
 
         <Select type="text"
