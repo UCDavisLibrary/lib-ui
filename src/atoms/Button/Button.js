@@ -8,7 +8,7 @@ import { CSSTransition } from 'react-transition-group';
 const buttonProps = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
-  variant: PropTypes.oneOf([ 'primary', 'secondary', 'ghost', 'arrow' ]),
+  variant: PropTypes.oneOf([ 'primary', 'secondary', 'ghost', 'arrow', 'destructive' ]),
   size: PropTypes.oneOf([ 'sm', 'md' ]),
   disabled: PropTypes.bool,
   className: PropTypes.string

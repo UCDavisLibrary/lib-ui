@@ -44,7 +44,7 @@
   }
 
   /**
-   * 'type' prop
+   * 'variant' prop
    */
   &.primary {
     background-color: $primary;
@@ -81,6 +81,15 @@
 
     &:hover {
       background-color: rgba(0, 0, 0, .1);
+    }
+  }
+  &.destructive {
+    background-color: #e53935;
+
+    color: rgba(255, 255, 255, 1);
+
+    &:hover {
+      background-color: #ef5350;
     }
   }
 

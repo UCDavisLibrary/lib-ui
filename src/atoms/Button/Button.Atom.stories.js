@@ -120,6 +120,19 @@ storiesOf('Atoms/Buttons', module)
               </Button>
             </td>
           </tr>
+          <tr>
+            <td>Destructive</td>
+            <td>
+              <Button variant="destructive" type="submit" onClick={ () => { console.log('Console click') } }>
+                Delete position
+              </Button>
+            </td>
+            <td>
+              <Button size="sm" variant="destructive" type="submit" onClick={ () => { console.log('Console click') } }>
+                Delete position
+              </Button>
+            </td>
+          </tr>
         </tbody>
       </table>
     ))
