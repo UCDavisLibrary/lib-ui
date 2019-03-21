@@ -58,6 +58,7 @@ storiesOf('Molecules/Select', module)
       <table cellPadding="16">
         <thead style={{ backgroundColor: 'hsl(0, 0%, 90%)' }}>
           <tr>
+            <th>Example</th>
             <th>Size: md (default)</th>
             <th>Size: sm</th>
           </tr>
@@ -65,10 +66,24 @@ storiesOf('Molecules/Select', module)
         <tbody>
           <tr>
             <td>
+              Basic select
+            </td>
+            <td>
               <Select type="text" name="colorsMd" label="Colors" options={ options } required />
             </td>
             <td>
               <Select type="text" size="sm" name="colorsSm" label="Colors" options={ options } />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Disabled
+            </td>
+            <td>
+              <Select type="text" name="colorsMd" label="Colors" options={ options } required disabled />
+            </td>
+            <td>
+              <Select type="text" size="sm" name="colorsSm" label="Colors" options={ options } disabled />
             </td>
           </tr>
         </tbody>

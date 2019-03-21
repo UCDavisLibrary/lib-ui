@@ -32,14 +32,15 @@ export class Select extends Component {
   }
 
   render() {
-    const { name, size, required, className, value, onChange, ...props } = this.props;
+    const { name, size, required, className, value, onChange, disabled, ...props } = this.props;
 
     return (
-      <div className={ `Select ${ size } ${ !value && 'unselected' } ${ required && 'required' } ${ className }` }>
+      <div className={ `Select ${ size } ${ !value && 'unselected' } ${ required ? 'required' : '' } ${ disabled ? 'disabled' : '' } ${ className }` }>
         <select name={ name }
                 value={ value }
                 onChange={ onChange }
                 required={ required }
+                disabled={ disabled }
                 { ...props }>
           { this.renderOptions() }
         </select>

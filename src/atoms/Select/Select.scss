@@ -35,6 +35,10 @@
     }
   }
 
+  &.disabled:after {
+    display: none;
+  }
+
   /**
    * 'size' prop
    */

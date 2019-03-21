@@ -37,6 +37,15 @@
     }
   }
 
+  &.disabled {
+    label .asterisk {
+      display: none;
+    }
+    .assistive-text {
+      display: none;
+    }
+  }
+
   /**
    * 'size' prop
    */

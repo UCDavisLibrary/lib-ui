@@ -27,6 +27,8 @@
       border-bottom-color: #002855; }
     .Select select:required:invalid {
       border-bottom-color: #F44336; }
+  .Select.disabled:after {
+    display: none; }
   .Select.sm select {
     padding: .5rem 2.5rem .5rem .5rem;
     font-size: .8rem; }

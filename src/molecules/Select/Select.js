@@ -41,10 +41,22 @@ export class Select extends Component {
   }
 
   render() {
-    const { type, size, name, label, value, assistiveText, className, options, required, ...props } = this.props;
+    const {
+      type,
+      size,
+      name,
+      label,
+      value,
+      assistiveText,
+      className,
+      options,
+      required,
+      disabled,
+      ...props
+    } = this.props;
 
     return (
-      <div className={`Molecule-Select ${ size } ${ className }`}>
+      <div className={`Molecule-Select ${ size } ${ disabled ? 'disabled' : '' } ${ className }`}>
         <label htmlFor={ name }>
           <span className="label-text">{ label }</span>
           { required && <span className="asterisk">*</span> }
@@ -54,6 +66,7 @@ export class Select extends Component {
                 size={ size }
                 options={ options }
                 onChange={ this.handleChange }
+                disabled={ disabled }
                 required={ required } />
         <div className="assistive-text">
           {

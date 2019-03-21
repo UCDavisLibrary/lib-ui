@@ -25,6 +25,10 @@
       display: inline-block;
       margin-right: .2rem;
       color: #F44336; }
+  .Molecule-Select.disabled label .asterisk {
+    display: none; }
+  .Molecule-Select.disabled .assistive-text {
+    display: none; }
   .Molecule-Select.sm label {
     margin-bottom: .2rem;
     font-size: .8rem; }

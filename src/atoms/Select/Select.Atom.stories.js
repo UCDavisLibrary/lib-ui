@@ -58,12 +58,16 @@ storiesOf('Atoms/Select', module)
       <table cellPadding="16">
         <thead style={{ backgroundColor: 'hsl(0, 0%, 90%)' }}>
           <tr>
+            <th>Example</th>
             <th>Size: md (default)</th>
             <th>Size: sm</th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <td>
+              Basic select
+            </td>
             <td>
               <Select name="colors"
                       value=""
@@ -74,6 +78,24 @@ storiesOf('Atoms/Select', module)
                       value=""
                       size="sm"
                       options={ options } />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Disabled
+            </td>
+            <td>
+              <Select name="colors"
+                      value=""
+                      options={ options }
+                      disabled />
+            </td>
+            <td>
+              <Select name="colors"
+                      value=""
+                      size="sm"
+                      options={ options }
+                      disabled />
             </td>
           </tr>
         </tbody>

@@ -81,6 +81,15 @@ storiesOf('Atoms/Input', module)
               <Input type="password" size="sm" name="input3sm" />
             </td>
           </tr>
+          <tr>
+            <td>disabled</td>
+            <td>
+              <Input type="text" name="input4" value={ 'hello world' } disabled />
+            </td>
+            <td>
+              <Input type="text" size="sm" name="input4sm" value={ 'hello world' } disabled />
+            </td>
+          </tr>
         </tbody>
       </table>
     ))

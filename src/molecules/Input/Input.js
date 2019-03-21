@@ -25,10 +25,23 @@ export class Input extends Component {
 
 
   render() {
-    const { type, size, name, label, value, onChange, assistiveText, className, placeholder, autocomplete, required } = this.props;
+    const {
+      type,
+      size,
+      name,
+      label,
+      value,
+      onChange,
+      assistiveText,
+      className,
+      placeholder,
+      autocomplete,
+      required,
+      disabled
+    } = this.props;
 
     return (
-      <div className={`Molecule-Input ${ size } ${ className }`}>
+      <div className={`Molecule-Input ${ size } ${ disabled ? 'disabled' : '' } ${ className }`}>
         <label htmlFor={ name }>
           <span className="label-text">{ label }</span>
           { required && <span className="asterisk">*</span> }
@@ -41,7 +54,8 @@ export class Input extends Component {
                      placeholder={ placeholder }
                      autocomplete={ autocomplete }
                      onChange={ onChange }
-                     required={ required } />
+                     required={ required }
+                     disabled={ disabled } />
         <div className="assistive-text">
           {
             required &&
