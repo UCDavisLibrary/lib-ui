@@ -50,6 +50,7 @@
     "start": "npm-run-all -p watch-css storybook",
     "build-storybook": "build-storybook",
     "build-js": "webpack",
-    "build": "npm-run-all build-css build-js"
+    "build": "npm-run-all build-css build-js",
+    "publish": "npm publish --access=public"
   }
 }
