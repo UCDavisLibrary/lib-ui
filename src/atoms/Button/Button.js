@@ -32,7 +32,7 @@ export class Button extends Component {
 
   handleClick = ( e ) => {
     e.preventDefault();
-    e.stopPropagation();
+    // e.stopPropagation();
 
     const { type, onClick } = this.props;
 

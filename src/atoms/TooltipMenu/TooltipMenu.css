@@ -1,0 +1,39 @@
+.TooltipMenu {
+  position: relative; }
+  .TooltipMenu .children-container {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none; }
+  .TooltipMenu .tooltip-menu-container {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 10; }
+    .TooltipMenu .tooltip-menu-container .tooltip-menu-section {
+      min-width: 140px;
+      padding: 4px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      .TooltipMenu .tooltip-menu-container .tooltip-menu-section:first-child {
+        border-top: none; }
+      .TooltipMenu .tooltip-menu-container .tooltip-menu-section .tooltip-menu-item {
+        width: 100%;
+        padding: 4px 1rem;
+        border: none;
+        background-color: none;
+        font-size: 1rem;
+        color: #1976D2;
+        text-align: left; }
+        .TooltipMenu .tooltip-menu-container .tooltip-menu-section .tooltip-menu-item:hover {
+          background-color: rgba(25, 118, 210, 0.1);
+          cursor: pointer; }
+        .TooltipMenu .tooltip-menu-container .tooltip-menu-section .tooltip-menu-item.destructive {
+          color: #ef5350; }
+          .TooltipMenu .tooltip-menu-container .tooltip-menu-section .tooltip-menu-item.destructive:hover {
+            background-color: rgba(239, 83, 80, 0.1); }
+  .TooltipMenu.placement-bottomRight .tooltip-menu-container {
+    right: 0;
+    margin-top: 4px; }
+  .TooltipMenu.placement-bottomLeft .tooltip-menu-container {
+    left: 0;
+    margin-top: 4px; }

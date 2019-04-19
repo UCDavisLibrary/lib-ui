@@ -29,6 +29,8 @@
     display: none; }
   .Molecule-Select.disabled .assistive-text {
     display: none; }
+  .Molecule-Select.disabled select {
+    color: #000; }
   .Molecule-Select.sm label {
     margin-bottom: .2rem;
     font-size: .8rem; }
