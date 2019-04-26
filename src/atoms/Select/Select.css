@@ -27,6 +27,8 @@
       border-bottom-color: #002855; }
     .Select select:required:invalid {
       border-bottom-color: #F44336; }
+    .Select select:disabled {
+      border-bottom-color: rgba(0, 0, 0, 0.6); }
   .Select.disabled:after {
     display: none; }
   .Select.sm select {
