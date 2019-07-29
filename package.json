@@ -1,6 +1,6 @@
 {
   "name": "@ucd-libops/lib-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "UCD Library React component library",
   "main": "dist/index.js",
   "devDependencies": {

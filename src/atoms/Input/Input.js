@@ -58,7 +58,7 @@ export class Input extends Component {
   }
 
   renderDefaultInput = () => {
-    const { className, type, size, name, placeholder, value, onChange, required, autocomplete, disabled } = this.props;
+    const { className, type, size, name, placeholder, value, onChange, required, autocomplete, readonly, disabled } = this.props;
 
     return (
       <input className={`Atom-Input ${ size } ${ className }`}
@@ -69,12 +69,13 @@ export class Input extends Component {
              autoComplete={ autocomplete }
              required={ required }
              onChange={ this.handleChange }
+             readonly={ readonly }
              disabled={ disabled } />
     )
   }
 
   renderInputWithMask = ( mask ) => {
-    const { className, type, size, name, placeholder, value, onChange, required, autocomplete, disabled } = this.props;
+    const { className, type, size, name, placeholder, value, onChange, required, autocomplete, readonly, disabled } = this.props;
 
     return (
       <MaskedInput mask={[ '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/ ]}
@@ -87,6 +88,7 @@ export class Input extends Component {
                    autoComplete={ autocomplete }
                    required={ required }
                    onChange={ this.handleChange }
+                   readonly={ readonly }
                    disabled={ disabled } />
     )
   }

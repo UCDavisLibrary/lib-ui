@@ -37,6 +37,7 @@ export class Input extends Component {
       placeholder,
       autocomplete,
       required,
+      readonly,
       disabled
     } = this.props;
 
@@ -55,6 +56,7 @@ export class Input extends Component {
                      autocomplete={ autocomplete }
                      onChange={ onChange }
                      required={ required }
+                     readonly={ readonly }
                      disabled={ disabled } />
         <div className="assistive-text">
           {
