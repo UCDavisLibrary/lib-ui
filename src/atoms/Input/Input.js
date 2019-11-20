@@ -69,7 +69,7 @@ export class Input extends Component {
              autoComplete={ autocomplete }
              required={ required }
              onChange={ this.handleChange }
-             readonly={ readonly }
+             readOnly={ readonly }
              disabled={ disabled } />
     )
   }
@@ -88,7 +88,7 @@ export class Input extends Component {
                    autoComplete={ autocomplete }
                    required={ required }
                    onChange={ this.handleChange }
-                   readonly={ readonly }
+                   readOnly={ readonly }
                    disabled={ disabled } />
     )
   }
