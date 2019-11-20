@@ -9,7 +9,7 @@ storiesOf('Theme', module)
     'Typography',
     () => (
       <div>
-        <strong>Headers - Montserrat</strong>
+        <strong>Headers - Cereal</strong>
 
         <h1>H1 - Lorem ipsum dolor</h1>
         <h2>H2 - Lorem ipsum dolor</h2>
@@ -21,7 +21,7 @@ storiesOf('Theme', module)
         <hr />
 
         <p>
-          <strong>Body Text - Open Sans</strong>
+          <strong>Body Text - Cereal</strong>
         </p>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam nisl nisi, nec aliquet leo semper non. Vivamus dignissim semper faucibus. Sed quis nibh molestie, scelerisque ante dignissim, feugiat quam. Maecenas vitae tincidunt dui. Quisque varius sem id lobortis varius. Nullam interdum sodales tristique. Praesent non orci vitae neque semper volutpat. Maecenas vitae viverra ex, sit amet luctus erat.
