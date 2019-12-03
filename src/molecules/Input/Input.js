@@ -7,7 +7,7 @@ import * as Atoms from '../../atoms';
 
 const inputProps = {
   value: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'email', 'password', 'tel']),
+  type: PropTypes.oneOf(['text', 'email', 'password', 'tel', 'textarea']),
   size: PropTypes.oneOf(['sm', 'md']),
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -23,7 +23,6 @@ const defaultInputProps = {
 
 export class Input extends Component {
 
-
   render() {
     const {
       type,
@@ -35,6 +34,8 @@ export class Input extends Component {
       assistiveText,
       className,
       placeholder,
+      rows,
+      cols,
       autocomplete,
       required,
       readonly,
@@ -53,6 +54,8 @@ export class Input extends Component {
                      name={ name }
                      value={ value }
                      placeholder={ placeholder }
+                     rows={ rows }
+                     cols={ cols }
                      autocomplete={ autocomplete }
                      onChange={ onChange }
                      required={ required }

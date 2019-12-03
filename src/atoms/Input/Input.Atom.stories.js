@@ -90,6 +90,15 @@ storiesOf('Atoms/Input', module)
               <Input type="text" size="sm" name="input4sm" value={ 'hello world' } disabled />
             </td>
           </tr>
+          <tr>
+            <td>textarea</td>
+            <td>
+              <Input type="textarea" name="input5" value={ 'hello world' } disabled />
+            </td>
+            <td>
+              <Input type="textarea" size="sm" name="input5sm" value={ 'hello world' } disabled />
+            </td>
+          </tr>
         </tbody>
       </table>
     ))

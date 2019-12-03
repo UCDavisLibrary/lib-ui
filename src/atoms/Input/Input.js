@@ -6,7 +6,7 @@ import MaskedInput from 'react-text-mask';
 
 const inputProps = {
   value: PropTypes.string,
-  type: PropTypes.oneOf(['text', 'email', 'password', 'tel']),
+  type: PropTypes.oneOf(['text', 'email', 'password', 'tel', 'textarea']),
   size: PropTypes.oneOf(['sm', 'md']),
   className: PropTypes.string,
   name: PropTypes.string.isRequired
@@ -93,12 +93,31 @@ export class Input extends Component {
     )
   }
 
+  renderTextArea = () => {
+    const { className, size, name, placeholder, rows, cols, value, onChange, required, readonly, disabled } = this.props;
+
+    return (
+      <textarea className={`Atom-Input ${ size } ${ className }`}
+                name={ name }
+                value={ this.state.value }
+                placeholder={ placeholder || this.getPlaceholder() }
+                rows={ rows || 3 }
+                cols={ cols || 30 }
+                required={ required }
+                onChange={ this.handleChange }
+                readOnly={ readonly }
+                disabled={ disabled } />
+    )
+  }
+
   render() {
     const { type } = this.props;
 
     switch ( type ) {
       case 'tel':
         return this.renderInputWithMask( '(999) 999-9999' );
+      case 'textarea':
+        return this.renderTextArea();
       default:
         return this.renderDefaultInput();
     }

@@ -91,6 +91,15 @@ storiesOf('Molecules/Input', module)
               <Input type="email" size="sm" name="input2sm" label="E-mail address" value="hello@world.foo" required disabled />
             </td>
           </tr>
+          <tr>
+            <td>textarea</td>
+            <td>
+              <Input type="textarea" name="input4" label="Description" value="Lorem ipsum dolor" required disabled />
+            </td>
+            <td>
+              <Input type="textarea" size="sm" name="input4sm" label="Description" value="Lorem ipsum dolor" required disabled />
+            </td>
+          </tr>
         </tbody>
       </table>
     ))
