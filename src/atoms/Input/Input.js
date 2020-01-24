@@ -28,12 +28,6 @@ export class Input extends Component {
     };
   }
 
-  componentWillReceiveProps( nextProps ) {
-    if( nextProps.value !== this.state.value ) {
-      this.setState({ value: nextProps.value });
-    }
-  }
-
   getPlaceholder = () => {
     const { type } = this.props;
 
@@ -53,6 +47,8 @@ export class Input extends Component {
     if( onChange ) {
       onChange( e );
     }
+
+    console.log( e.target.value );
 
     this.setState({ value: e.target.value });
   }

@@ -76,19 +76,19 @@ storiesOf('Molecules/Input', module)
           <tr>
             <td>password</td>
             <td>
-              <Input type="password" name="input3" label="Password" assistiveText="At least 12 characters" />
+              <Input type="password" name="input3" label="Password" assistiveText="At least 12 characters" required />
             </td>
             <td>
-              <Input type="password" size="sm" name="input3sm" label="Password" assistiveText="At least 12 characters" />
+              <Input type="password" size="sm" name="input3sm" label="Password" assistiveText="At least 12 characters" required />
             </td>
           </tr>
           <tr>
             <td>email</td>
             <td>
-              <Input type="email" name="input2" label="E-mail address" value="hello@world.foo" required disabled />
+              <Input type="email" name="input2" label="E-mail address" value="hello@world.foo" assistiveText="hello@world.foo" required disabled />
             </td>
             <td>
-              <Input type="email" size="sm" name="input2sm" label="E-mail address" value="hello@world.foo" required disabled />
+              <Input type="email" size="sm" name="input2sm" label="E-mail address" value="hello@world.foo" assistiveText="hello@world.foo" required disabled />
             </td>
           </tr>
           <tr>

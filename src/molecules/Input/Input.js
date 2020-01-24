@@ -63,13 +63,18 @@ export class Input extends Component {
                      disabled={ disabled } />
         <div className="assistive-text">
           {
+            assistiveText &&
+            <div className="assistive-text-content">
+              { assistiveText }
+            </div>
+          }
+          {
             required &&
             <div className="required">
               <span className="asterisk">*</span>
               <span>Required</span>
             </div>
           }
-          { assistiveText }
         </div>
       </div>
     )
