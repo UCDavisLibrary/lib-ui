@@ -48,8 +48,6 @@ export class Input extends Component {
       onChange( e );
     }
 
-    console.log( e.target.value );
-
     this.setState({ value: e.target.value });
   }
 
