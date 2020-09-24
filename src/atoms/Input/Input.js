@@ -69,7 +69,7 @@ export class Input extends Component {
   }
 
   renderInputWithMask = ( mask ) => {
-    const { className, type, size, name, placeholder, value, onChange, required, autocomplete, readonly, disabled } = this.props;
+    const { className, type, size, name, placeholder, value, onChange, required, autocomplete, readonly, disabled, step, min, max } = this.props;
 
     return (
       <MaskedInput mask={[ '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/ ]}
@@ -77,6 +77,9 @@ export class Input extends Component {
                    className={`Atom-Input ${ size } ${ className }`}
                    type={ type }
                    name={ name }
+                   step={ step }
+                   min={ min }
+                   max={ max }
                    value={ this.state.value }
                    placeholder={ placeholder || this.getPlaceholder() }
                    autoComplete={ autocomplete }
